@@ -3,7 +3,6 @@ import TabNavigator from './TabNavigator';
 import ProfileScreen from '@/screens/profile';
 import { TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { HeaderTitle } from '@react-navigation/elements';
 const Drawer = createDrawerNavigator();
 
 export default function DrawerNavigator() {
@@ -12,9 +11,14 @@ export default function DrawerNavigator() {
       screenOptions={({ navigation }) => ({
         headerTitle: 'Smart Tools Hub',
         headerTitleAlign: 'center',
+        headerTitleStyle: {
+          color: '#708090',
+          fontSize: 20,
+          fontWeight: 'bold',
+        },
         headerLeft: () => (
           <TouchableOpacity onPress={() => navigation.toggleDrawer()} style={{ marginLeft: 25 }}>
-            <Ionicons name="menu-outline" size={28} color="black" />
+            <Ionicons name="menu-outline" size={28} color="#333333" />
           </TouchableOpacity>
         ),
       })}>

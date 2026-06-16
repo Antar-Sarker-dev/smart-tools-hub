@@ -27,7 +27,7 @@ export default function TabNavigator() {
             <MaterialIcons
               name="drive-file-move-outline"
               size={30}
-              color={focused ? '#0A84FF' : 'black'}
+              color={focused ? '#0A84FF' : '#708090'}
             />
           ),
         }}

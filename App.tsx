@@ -9,7 +9,7 @@ export default function App() {
     <SafeAreaProvider>
       <StatusBar style="auto" />
       <NavigationContainer>
-      <RootStack/>
+        <RootStack />
       </NavigationContainer>
     </SafeAreaProvider>
   );
