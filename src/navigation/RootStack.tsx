@@ -15,6 +15,7 @@ import QrCodeGeneratorScreen from '@/screens/tools/qrCode';
 import ResizePDF from '@/screens/tools/resizePDF';
 import SplitPDF from '@/screens/tools/splitPDF';
 import ViewPDF from '@/screens/tools/viewPDF';
+import PdfToWord from '@/screens/tools/pdfToWord';
 
 const Stack = createNativeStackNavigator();
 export default function RootStack() {
@@ -88,6 +89,12 @@ export default function RootStack() {
         name="splitPDF"
         component={SplitPDF}
         options={{ title: 'split pdf', headerShown: true }}
+      />
+
+      <Stack.Screen
+        name="pdfToWord"
+        component={PdfToWord}
+        options={{ title: 'pdf to word', headerShown: true }}
       />
 
       <Stack.Screen

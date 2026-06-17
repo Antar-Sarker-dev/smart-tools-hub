@@ -68,10 +68,11 @@ export const Tools_Data = [
   },
   {
     id: '12',
-    title: 'Files',
-    screenName: 'files',
-    icon: require('../../assets/toolsIcons/file.webp'),
+    title: 'Edit PDF',
+    screenName: 'editPDF',
+    icon: require('../../assets/toolsIcons/edit-pdf.webp'),
   },
+
   {
     id: '13',
     title: 'Split PDF',
@@ -81,14 +82,14 @@ export const Tools_Data = [
 
   {
     id: '14',
-    title: 'Image to PDF',
-    screenName: 'imageToPDF',
-    icon: require('../../assets/toolsIcons/image-to-pdf.webp'),
+    title: 'PDF to Word',
+    screenName: 'pdfToWord',
+    icon: require('../../assets/toolsIcons/word-to-pdf.webp'),
   },
   {
     id: '15',
-    title: 'Edit PDF',
-    screenName: 'editPDF',
-    icon: require('../../assets/toolsIcons/edit-pdf.webp'),
+    title: 'Files',
+    screenName: 'files',
+    icon: require('../../assets/toolsIcons/file.webp'),
   },
 ];
