@@ -9,12 +9,21 @@ import RecentFileScreen from '@/screens/main/recentFile';
 const Tab = createBottomTabNavigator();
 export default function TabNavigator() {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: '#f7f3f3',
+          elevation: 12,
+        },
+      }}>
       <Tab.Screen
-        name="Contact"
+        name="allTools"
         component={ContactScreen}
         options={{
           title: 'All Tools',
+          tabBarActiveTintColor: '#1A1A1B',
+          tabBarInactiveTintColor: '#708090',
           tabBarIcon: ({ color, size }) => <Ionicons name="apps" size={size} color={color} />,
         }}
       />
@@ -23,12 +32,10 @@ export default function TabNavigator() {
         component={RecentFileScreen}
         options={{
           title: 'Recent Files',
-          tabBarIcon: ({ focused, color, size }) => (
-            <MaterialIcons
-              name="drive-file-move-outline"
-              size={30}
-              color={focused ? '#0A84FF' : '#708090'}
-            />
+          tabBarActiveTintColor: '#1A1A1B',
+          tabBarInactiveTintColor: '#708090',
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="drive-file-move-outline" size={30} color={color} />
           ),
         }}
       />
@@ -38,12 +45,10 @@ export default function TabNavigator() {
         component={ScannerScreen}
         options={{
           title: 'pdf Scanner',
-          tabBarIcon: ({ focused, color, size }) => (
-            <MaterialCommunityIcons
-              name="line-scan"
-              size={24}
-              color={focused ? '#0A84FF' : 'black'}
-            />
+          tabBarActiveTintColor: '#1A1A1B',
+          tabBarInactiveTintColor: '#708090',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="line-scan" size={24} color={color} />
           ),
         }}
       />
