@@ -2,7 +2,6 @@ import { Tools_Data } from '@/constants/toolsData';
 import { ToolDataType } from '@/types/toolDataType';
 import { View, Text, TextInput, FlatList, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
-
 const ToolCard = ({
   item,
   navigation,
@@ -10,8 +9,11 @@ const ToolCard = ({
   item: ToolDataType;
   navigation: NavigationProp<any>;
 }) => (
-  <TouchableOpacity activeOpacity={0.7} style={styles.card} onPress={()=>navigation.navigate(item.screenName)}>
-    <Image source={item.icon} style={{ width: 45, height: 45, resizeMode: 'contain' }} />
+  <TouchableOpacity
+    activeOpacity={0.7}
+    style={styles.card}
+    onPress={() => navigation.navigate(item.screenName)}>
+    <Image source={item.icon} style={{ width: 40, height: 40, resizeMode: 'contain' }} />
     <Text className="mt-14 text-center text-slate-600" style={styles.cardTitle}>
       {item.title}
     </Text>
@@ -21,14 +23,14 @@ const ToolCard = ({
 export default function ToolsScreen() {
   const navigation: any = useNavigation();
   return (
-    <View>
+    <View className="bg-['#E5E4E2']" style={{ paddingBottom: 78 }}>
       {/* search */}
       <View style={styles.searchBox}>
+        <TextInput placeholder="Search tools..." placeholderTextColor="#94a3b8" />
         <Image
           source={require('../../../assets/searchIcon.webp')}
           style={{ width: 17, height: 17, resizeMode: 'contain' }}
         />
-        <TextInput placeholder="Search tools..." placeholderTextColor="#94a3b8" />
       </View>
 
       {/* Grid */}
@@ -46,15 +48,16 @@ export default function ToolsScreen() {
 
 const styles = StyleSheet.create({
   searchBox: {
+    backgroundColor: '#FAFBFF',
     flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#fff',
     borderRadius: 16,
     paddingHorizontal: 16,
     marginHorizontal: 18,
     marginVertical: 16,
     height: 48,
-    elevation: 3,
+    elevation: 1,
   },
 
   row: {
@@ -65,22 +68,21 @@ const styles = StyleSheet.create({
 
   card: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FAFBFF',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 10,
-    paddingHorizontal: 10,
-    borderRadius: 18,
+    padding: 5,
+    borderRadius: 32,
     marginHorizontal: 8,
-    elevation: 4,
+    elevation: 1,
     height: 96,
   },
 
   cardTitle: {
     marginTop: 5,
-    fontSize: 11,
+    fontSize: 10,
     textAlign: 'center',
-    color: '#475569',
-    fontWeight: '500',
+    color: 'gray',
+    fontWeight: '600',
   },
 });
